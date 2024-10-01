@@ -4,11 +4,11 @@
 
 using namespace std;
 
-void Dustbin9000::throwOutGarbage(const Garbage& garbage){
+void Dustbin9000::throwOutGarbage(Garbage const& garbage){
     houseWasteContent.push_back(garbage);
 }
 
-void Dustbin9000::throwOutPaperGarbage(const PaperGarbage& paperGarbage){
+void Dustbin9000::throwOutPaperGarbage(PaperGarbage const& paperGarbage){
     if (paperGarbage.isSqueezed){
         paperContent.push_back(paperGarbage);
     } else {
@@ -16,13 +16,12 @@ void Dustbin9000::throwOutPaperGarbage(const PaperGarbage& paperGarbage){
     }
 }
 
-void Dustbin9000::throwOutPlasticGarbage(const PlasticGarbage& plasticGarbage){
+void Dustbin9000::throwOutPlasticGarbage(PlasticGarbage const& plasticGarbage){
     if (plasticGarbage.isClean){
         plasticContent.push_back(plasticGarbage);
     } else {
         throw DustbinContentError("Plastic garbage should be cleaned!");
     }
-
 }
 
 void Dustbin9000::emptyContents(){
@@ -33,25 +32,19 @@ void Dustbin9000::emptyContents(){
     bottleCaps.clear();
 }
 
-vector<PaperGarbage> Dustbin9000::getPaperContent(){
-    vector<PaperGarbage> paperContentCopy = paperContent;
-    return paperContentCopy;
+vector<PaperGarbage> const& Dustbin9000::getPaperContent(){
+    return paperContent;
 }
 
-vector<PlasticGarbage> Dustbin9000::getPlasticContent(){
-    vector<PlasticGarbage> plasticContentCopy = plasticContent;
-    return plasticContentCopy;
+vector<PlasticGarbage> const& Dustbin9000::getPlasticContent(){
+    return plasticContent;
 }
 
-vector<Garbage> Dustbin9000::getHouseWasteContent(){
-    vector<Garbage> houseWasteContentCopy = houseWasteContent;
-    return houseWasteContentCopy;
+vector<Garbage> const& Dustbin9000::getHouseWasteContent(){
+    return houseWasteContent;
 }
 
-
-
-
-void Dustbin9000::throwOutMetalGarbage(const MetalGarbage& metalGarbage){
+void Dustbin9000::throwOutMetalGarbage(MetalGarbage const& metalGarbage){
     if (metalGarbage.isClean){
         metalContent.push_back(metalGarbage);
     } else {
@@ -59,7 +52,7 @@ void Dustbin9000::throwOutMetalGarbage(const MetalGarbage& metalGarbage){
     }
 }
 
-void Dustbin9000::throwOutBottleCap(const BottleCap& bottleCap){
+void Dustbin9000::throwOutBottleCap(BottleCap const& bottleCap){
     if (bottleCap.isClean){
         if (bottleCap.color == "pink"){
             bottleCaps.push_back(bottleCap);
@@ -71,11 +64,9 @@ void Dustbin9000::throwOutBottleCap(const BottleCap& bottleCap){
     }
 }
 
-vector<MetalGarbage> Dustbin9000::getMetalContent() {
-    vector<MetalGarbage> metalContentCopy = metalContent;
-    return metalContentCopy;
+vector<MetalGarbage> const& Dustbin9000::getMetalContent() {
+    return metalContent;
 }
-vector<BottleCap> Dustbin9000::getBottleCaps() {
-    vector<BottleCap> bottleCapsCopy = bottleCaps;
-    return bottleCapsCopy;
+vector<BottleCap> const& Dustbin9000::getBottleCaps() {
+    return bottleCaps;
 }
