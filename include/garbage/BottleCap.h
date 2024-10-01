@@ -4,8 +4,8 @@
 
 class BottleCap {
  public:
-    std::string name;
-    std::string color;
+    std::string const name;
+    std::string const color;
     bool isClean;
     void clean();
     BottleCap(std::string name, bool isClean, std::string color);

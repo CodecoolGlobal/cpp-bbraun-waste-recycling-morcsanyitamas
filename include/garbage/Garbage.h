@@ -4,6 +4,6 @@
 
 class Garbage {
  public:
-    std::string name;
+    std::string const name;
     Garbage(std::string name);
 };

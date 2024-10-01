@@ -9,6 +9,6 @@ void BottleCapException::print() const {
     cerr << msg << endl;
 }
 
-string BottleCapException::getMsg() const {
+string const& BottleCapException::getMsg() const {
     return msg;
 }

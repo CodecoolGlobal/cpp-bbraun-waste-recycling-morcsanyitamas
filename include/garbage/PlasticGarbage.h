@@ -4,7 +4,7 @@
 
 class PlasticGarbage {
  public:
-    std::string name;
+    std::string const name;
     bool isClean;
     PlasticGarbage(std::string name, bool isClean);
     void clean();

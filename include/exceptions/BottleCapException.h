@@ -4,9 +4,9 @@
 
 class BottleCapException {
  private:
-    std::string msg;
+    std::string const msg;
  public:
-    std::string getMsg() const;
+    std::string const& getMsg() const;
     BottleCapException(const std::string &msg);
     void print() const;
 };

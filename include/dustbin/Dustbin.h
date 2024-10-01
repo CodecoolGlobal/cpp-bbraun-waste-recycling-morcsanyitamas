@@ -8,16 +8,17 @@
 
 class Dustbin {
  private:
-    std::string color;
+    std::string const color;
     std::vector<PaperGarbage> paperContent;
     std::vector<PlasticGarbage> plasticContent;
     std::vector<Garbage> houseWasteContent;
  public:
-    std::vector<PaperGarbage> getPaperContent();
-    std::vector<PlasticGarbage> getPlasticContent();
-    std::vector<Garbage> getHouseWasteContent();
-    void throwOutGarbage(const Garbage& garbage);
-    void throwOutPaperGarbage(const PaperGarbage& paperGarbage);
-    void throwOutPlasticGarbage(const PlasticGarbage& plasticGarbage);
+    Dustbin(std::string color);
+    std::vector<PaperGarbage> const& getPaperContent();
+    std::vector<PlasticGarbage> const& getPlasticContent();
+    std::vector<Garbage> const& getHouseWasteContent();
+    void throwOutGarbage(Garbage const& garbage);
+    void throwOutPaperGarbage(PaperGarbage const& paperGarbage);
+    void throwOutPlasticGarbage(PlasticGarbage const& plasticGarbage);
     void emptyContents();
 };

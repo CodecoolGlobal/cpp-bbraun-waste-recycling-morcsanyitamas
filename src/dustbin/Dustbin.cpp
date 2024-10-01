@@ -3,11 +3,13 @@
 
 using namespace std;
 
-void Dustbin::throwOutGarbage(const Garbage& garbage){
+Dustbin::Dustbin(string color) : color(color){};
+
+void Dustbin::throwOutGarbage(Garbage const& garbage) {
     houseWasteContent.push_back(garbage);
 }
 
-void Dustbin::throwOutPaperGarbage(const PaperGarbage& paperGarbage){
+void Dustbin::throwOutPaperGarbage(PaperGarbage const& paperGarbage) {
     if (paperGarbage.isSqueezed){
         paperContent.push_back(paperGarbage);
     } else {
@@ -15,32 +17,28 @@ void Dustbin::throwOutPaperGarbage(const PaperGarbage& paperGarbage){
     }
 }
 
-void Dustbin::throwOutPlasticGarbage(const PlasticGarbage& plasticGarbage){
-    if (plasticGarbage.isClean){
+void Dustbin::throwOutPlasticGarbage(PlasticGarbage const& plasticGarbage) {
+    if (plasticGarbage.isClean) {
         plasticContent.push_back(plasticGarbage);
     } else {
         throw DustbinContentError("Plastic garbage should be cleaned!");
     }
-
 }
 
-void Dustbin::emptyContents(){
+void Dustbin::emptyContents() {
     paperContent.clear();
     plasticContent.clear();
     houseWasteContent.clear();
 }
 
-vector<PaperGarbage> Dustbin::getPaperContent(){
-    vector<PaperGarbage> paperContentCopy = paperContent;
-    return paperContentCopy;
+vector<PaperGarbage> const& Dustbin::getPaperContent() {
+    return paperContent;
 }
 
-vector<PlasticGarbage> Dustbin::getPlasticContent(){
-    vector<PlasticGarbage> plasticContentCopy = plasticContent;
-    return plasticContentCopy;
+vector<PlasticGarbage> const& Dustbin::getPlasticContent() {
+    return plasticContent;
 }
 
-vector<Garbage> Dustbin::getHouseWasteContent(){
-    vector<Garbage> houseWasteContentCopy = houseWasteContent;
-    return houseWasteContentCopy;
+vector<Garbage> const& Dustbin::getHouseWasteContent() {
+    return houseWasteContent;
 }

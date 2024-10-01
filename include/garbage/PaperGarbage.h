@@ -4,7 +4,7 @@
 
 class PaperGarbage {
  public:
-    std::string name;
+    std::string const name;
     bool isSqueezed;
     PaperGarbage(std::string name, bool isSqueezed);
     void squeeze();
