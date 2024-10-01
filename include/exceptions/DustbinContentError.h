@@ -1,9 +1,10 @@
-#pragma once
-#include <stdexcept>
+# pragma once
 
+#include <string>
 class DustbinContentError {
-public:
-   DustbinContentError() {
-      throw std::logic_error("DustbinContentError class in not implemented yet!");
-   };
+ private:
+    std::string msg;
+ public:
+    DustbinContentError(const std::string &msg);
+    void print() const;
 };
