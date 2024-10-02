@@ -2,8 +2,12 @@
 
 using namespace std;
 
-BottleCap::BottleCap(string name, bool isClean, string color) : color(color), name(name), isClean(isClean){}
+BottleCap::BottleCap(string const& name, bool isClean, string const& color) : color(color), name(name), isClean(isClean){}
 
 void BottleCap::clean(){
     isClean = true;
+}
+
+string const& BottleCap::getColor() const {
+    return color;
 }

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-PlasticGarbage::PlasticGarbage(string name, bool isClean) : isClean(isClean), name(name){}
+PlasticGarbage::PlasticGarbage(string const& name, bool isClean) : isClean(isClean), name(name){}
 
 void PlasticGarbage::clean(){
     isClean = true;

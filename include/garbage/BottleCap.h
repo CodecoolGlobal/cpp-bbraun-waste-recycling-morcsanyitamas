@@ -3,10 +3,12 @@
 #include "PlasticGarbage.h"
 
 class BottleCap {
- public:
+private:
     std::string const name;
     std::string const color;
+public:
+    std::string const& getColor() const;
     bool isClean;
     void clean();
-    BottleCap(std::string name, bool isClean, std::string color);
+    BottleCap(std::string const& name, bool isClean, std::string const& color);
 };

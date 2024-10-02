@@ -2,7 +2,7 @@
 
 using namespace std;
 
-MetalGarbage::MetalGarbage(string name, bool isClean) : isClean(isClean), name(name){}
+MetalGarbage::MetalGarbage(string const& name, bool isClean) : isClean(isClean), name(name){}
 
 void MetalGarbage::clean() {
     isClean = true;

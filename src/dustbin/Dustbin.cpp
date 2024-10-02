@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Dustbin::Dustbin(string color) : color(color){};
+Dustbin::Dustbin(string const& color) : color(color){};
 
 void Dustbin::throwOutGarbage(Garbage const& garbage) {
     houseWasteContent.push_back(garbage);

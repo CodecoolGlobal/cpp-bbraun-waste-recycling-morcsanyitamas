@@ -3,7 +3,8 @@
 #include <string>
 
 class Garbage {
- public:
+private:
     std::string const name;
-    Garbage(std::string name);
+public:
+    Garbage(std::string const& name);
 };

@@ -4,6 +4,8 @@
 
 using namespace std;
 
+Dustbin9000::Dustbin9000(string const& color) : color(color) {}
+
 void Dustbin9000::throwOutGarbage(Garbage const& garbage){
     houseWasteContent.push_back(garbage);
 }
@@ -54,13 +56,13 @@ void Dustbin9000::throwOutMetalGarbage(MetalGarbage const& metalGarbage){
 
 void Dustbin9000::throwOutBottleCap(BottleCap const& bottleCap){
     if (bottleCap.isClean){
-        if (bottleCap.color == "pink"){
+        if (bottleCap.getColor() == "pink"){
             bottleCaps.push_back(bottleCap);
         } else {
             throw BottleCapException("Only pink bottle caps can be thrown here!");
         }
     } else {
-        throw BottleCapException("Bottle caps are plastic ad should be clean!");
+        throw BottleCapException("Bottle caps are plastic and should be clean!");
     }
 }
 

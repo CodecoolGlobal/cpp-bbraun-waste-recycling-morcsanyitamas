@@ -13,7 +13,7 @@ class Dustbin {
     std::vector<PlasticGarbage> plasticContent;
     std::vector<Garbage> houseWasteContent;
  public:
-    Dustbin(std::string color);
+    Dustbin(std::string const& color);
     std::vector<PaperGarbage> const& getPaperContent();
     std::vector<PlasticGarbage> const& getPlasticContent();
     std::vector<Garbage> const& getHouseWasteContent();

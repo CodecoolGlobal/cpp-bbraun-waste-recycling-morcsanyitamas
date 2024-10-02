@@ -3,7 +3,7 @@
 
 using namespace std;
 
-DustbinContentError::DustbinContentError(const std::string &msg) : msg(msg) {}
+DustbinContentError::DustbinContentError(std::string const& msg) : msg(msg) {}
 
 void DustbinContentError::print() const {
     cerr << msg << endl;

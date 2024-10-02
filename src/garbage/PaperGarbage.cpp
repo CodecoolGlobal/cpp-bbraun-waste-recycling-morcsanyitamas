@@ -2,7 +2,7 @@
 
 using namespace std;
 
-PaperGarbage::PaperGarbage(string name, bool isSqueezed) : isSqueezed(isSqueezed), name(name){}
+PaperGarbage::PaperGarbage(string const& name, bool isSqueezed) : isSqueezed(isSqueezed), name(name){}
 
 void PaperGarbage::squeeze(){
     isSqueezed = true;

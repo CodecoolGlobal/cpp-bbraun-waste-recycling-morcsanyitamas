@@ -2,4 +2,4 @@
 
 using namespace std;
 
-Garbage::Garbage(string name): name(name) {}
+Garbage::Garbage(string const& name): name(name) {}

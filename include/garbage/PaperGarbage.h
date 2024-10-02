@@ -3,9 +3,10 @@
 #include <string>
 
 class PaperGarbage {
- public:
+private:
     std::string const name;
+public:
     bool isSqueezed;
-    PaperGarbage(std::string name, bool isSqueezed);
+    PaperGarbage(std::string const& name, bool isSqueezed);
     void squeeze();
 };
