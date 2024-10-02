@@ -5,8 +5,9 @@
 class PaperGarbage {
 private:
     std::string const name;
-public:
     bool isSqueezed;
+public:
     PaperGarbage(std::string const& name, bool isSqueezed);
     void squeeze();
+    bool isItSqueezed() const;
 };

@@ -7,3 +7,7 @@ PlasticGarbage::PlasticGarbage(string const& name, bool isClean) : isClean(isCle
 void PlasticGarbage::clean(){
     isClean = true;
 }
+
+bool PlasticGarbage::isItClean() const {
+    return isClean;
+}

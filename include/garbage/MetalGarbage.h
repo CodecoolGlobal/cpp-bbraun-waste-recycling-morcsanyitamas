@@ -5,8 +5,9 @@
 class MetalGarbage {
 private:
     std::string const name;
-public:
     bool isClean;
+public:
     MetalGarbage(std::string const &name, bool isClean);
     void clean();
+    bool isItClean() const;
 };

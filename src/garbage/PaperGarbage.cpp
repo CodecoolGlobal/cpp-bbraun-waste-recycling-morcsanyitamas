@@ -7,3 +7,7 @@ PaperGarbage::PaperGarbage(string const& name, bool isSqueezed) : isSqueezed(isS
 void PaperGarbage::squeeze(){
     isSqueezed = true;
 }
+
+bool PaperGarbage::isItSqueezed() const {
+    return isSqueezed;
+}

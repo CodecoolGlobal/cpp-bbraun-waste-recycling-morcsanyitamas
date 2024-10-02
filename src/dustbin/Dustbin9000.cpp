@@ -11,7 +11,7 @@ void Dustbin9000::throwOutGarbage(Garbage const& garbage){
 }
 
 void Dustbin9000::throwOutPaperGarbage(PaperGarbage const& paperGarbage){
-    if (paperGarbage.isSqueezed){
+    if (paperGarbage.isItSqueezed()){
         paperContent.push_back(paperGarbage);
     } else {
         throw DustbinContentError("Paper garbage should be squeezed!");
@@ -19,7 +19,7 @@ void Dustbin9000::throwOutPaperGarbage(PaperGarbage const& paperGarbage){
 }
 
 void Dustbin9000::throwOutPlasticGarbage(PlasticGarbage const& plasticGarbage){
-    if (plasticGarbage.isClean){
+    if (plasticGarbage.isItClean()){
         plasticContent.push_back(plasticGarbage);
     } else {
         throw DustbinContentError("Plastic garbage should be cleaned!");
@@ -47,7 +47,7 @@ vector<Garbage> const& Dustbin9000::getHouseWasteContent(){
 }
 
 void Dustbin9000::throwOutMetalGarbage(MetalGarbage const& metalGarbage){
-    if (metalGarbage.isClean){
+    if (metalGarbage.isItClean()){
         metalContent.push_back(metalGarbage);
     } else {
         throw DustbinContentError("Metal garbage should be cleaned!");
@@ -55,7 +55,7 @@ void Dustbin9000::throwOutMetalGarbage(MetalGarbage const& metalGarbage){
 }
 
 void Dustbin9000::throwOutBottleCap(BottleCap const& bottleCap){
-    if (bottleCap.isClean){
+    if (bottleCap.isItClean()){
         if (bottleCap.getColor() == "pink"){
             bottleCaps.push_back(bottleCap);
         } else {

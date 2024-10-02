@@ -7,3 +7,7 @@ MetalGarbage::MetalGarbage(string const& name, bool isClean) : isClean(isClean),
 void MetalGarbage::clean() {
     isClean = true;
 }
+
+bool MetalGarbage::isItClean() const {
+    return isClean;
+}

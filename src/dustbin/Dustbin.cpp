@@ -10,7 +10,7 @@ void Dustbin::throwOutGarbage(Garbage const& garbage) {
 }
 
 void Dustbin::throwOutPaperGarbage(PaperGarbage const& paperGarbage) {
-    if (paperGarbage.isSqueezed){
+    if (paperGarbage.isItSqueezed()) {
         paperContent.push_back(paperGarbage);
     } else {
         throw DustbinContentError("Paper garbage should be squeezed!");
@@ -18,7 +18,7 @@ void Dustbin::throwOutPaperGarbage(PaperGarbage const& paperGarbage) {
 }
 
 void Dustbin::throwOutPlasticGarbage(PlasticGarbage const& plasticGarbage) {
-    if (plasticGarbage.isClean) {
+    if (plasticGarbage.isItClean()) {
         plasticContent.push_back(plasticGarbage);
     } else {
         throw DustbinContentError("Plastic garbage should be cleaned!");
