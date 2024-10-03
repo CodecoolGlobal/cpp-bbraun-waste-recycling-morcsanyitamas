@@ -12,4 +12,5 @@ public:
     void clean();
     BottleCap(std::string const& name, bool isClean, std::string const& color);
     bool isItClean() const;
+    std::string const& getName() const;
 };

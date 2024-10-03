@@ -15,3 +15,7 @@ string const& BottleCap::getColor() const {
 bool BottleCap::isItClean() const {
     return isClean;
 }
+
+string const& BottleCap::getName() const {
+    return name;
+}

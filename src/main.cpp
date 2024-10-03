@@ -1,11 +1,11 @@
 #include <iostream>
-// #include "DustbinTests.h"
+#include "DustbinTests.h"
 
 using namespace std;
 
 int main() {
-    // Tester tester;
-    // tester.run();
     cout << "Hello, waste-recycling!" << endl;
+    Tester tester;
+    tester.run();
     return 0;
 }
